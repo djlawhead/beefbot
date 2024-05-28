@@ -12,7 +12,6 @@ export const start =  (token: string) => {
 export const stop =  (stream: Client<true>) => {
     stream.close().then(stopped);
 }
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
