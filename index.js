@@ -1,4 +1,3 @@
-const console = require("node:console");
 const rss = require("rss");
 const bot = require("bot");
 
@@ -21,9 +20,9 @@ function refresh() {
         .then((articles) => {
             // ... ready our bot!
             bot.start(BOT_TOKEN);
-            bot.ready = (client) => {
+            bot.ready = async (client) => {
                 // 3: Send message
-                client.channels.cache.get(CHANNEL_ID).send(articles[0].link);
+                await client.channels.cache.get(CHANNEL_ID).send(articles[0].link);
                 // 4: Disconnect bot
                 bot.stop();
             };
