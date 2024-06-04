@@ -1,5 +1,5 @@
-const rss = require("rss");
-const bot = require("bot");
+const rss = require("./rss.js");
+const bot = require("./bot.js");
 
 const RSS_URL = 'YOUR_RSS_FEED_URL';
 const BOT_TOKEN = 'YOUR_BOT_TOKEN';
